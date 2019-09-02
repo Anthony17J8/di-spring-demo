@@ -1,6 +1,7 @@
 package ru.ico.ltd.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import ru.ico.ltd.services.GreetingService;
 
@@ -10,7 +11,7 @@ public class ConstructorInjectedController {
     private GreetingService greetingService;
 
     // @Autowired // - optional for constructor injection
-    public ConstructorInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("constructorGreetingServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
