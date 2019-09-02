@@ -3,7 +3,10 @@ package ru.ico.ltd;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import ru.ico.ltd.controllers.ConstructorInjectedController;
 import ru.ico.ltd.controllers.MyController;
+import ru.ico.ltd.controllers.PropertyInjectedController;
+import ru.ico.ltd.controllers.SetterInjectedController;
 
 @SpringBootApplication
 public class DiSpringDemoApplication {
@@ -14,6 +17,10 @@ public class DiSpringDemoApplication {
         MyController controller = (MyController) ctx.getBean("myController");
 
         controller.greeting();
+
+        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+        System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
+        System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
     }
 
 }
