@@ -16,7 +16,7 @@ public class DiSpringDemoApplication {
 
         MyController controller = (MyController) ctx.getBean("myController");
 
-        controller.greeting();
+        System.out.println(controller.greeting());
 
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());

@@ -14,7 +14,9 @@ public class PropertyInjectedController {
      * But it's not always apparent, so use @Qualifier in that case.
      */
     @Autowired
-    //@Qualifier("greetingServiceImpl")
+    // have to define @Qualifier because @Primary overrides wiring method
+    // without this primary implementation will be injected
+    @Qualifier("greetingServiceImpl")
     public GreetingService greetingServiceImpl;
 
     public String sayHello() {
