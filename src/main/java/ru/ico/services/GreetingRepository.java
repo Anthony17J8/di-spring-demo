@@ -1,4 +1,4 @@
-package ru.ico.ltd.services;
+package ru.ico.services;
 
 public interface GreetingRepository {
 

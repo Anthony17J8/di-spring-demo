@@ -1,4 +1,4 @@
-package ru.ico.ltd.services;
+package ru.ico.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;

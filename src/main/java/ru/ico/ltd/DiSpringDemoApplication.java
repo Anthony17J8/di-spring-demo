@@ -8,7 +8,7 @@ import ru.ico.ltd.controllers.MyController;
 import ru.ico.ltd.controllers.PropertyInjectedController;
 import ru.ico.ltd.controllers.SetterInjectedController;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"ru.ico.services", "ru.ico.ltd.controllers"})
 public class DiSpringDemoApplication {
 
     public static void main(String[] args) {
