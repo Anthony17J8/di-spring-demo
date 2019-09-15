@@ -1,4 +1,4 @@
-package ru.ico.services;
+package ru.ico.ltd.services;
 
 public interface GreetingService {
 

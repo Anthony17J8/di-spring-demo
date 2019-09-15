@@ -1,7 +1,7 @@
 package ru.ico.ltd.controllers;
 
 import org.springframework.stereotype.Controller;
-import ru.ico.services.GreetingService;
+import ru.ico.ltd.services.GreetingService;
 
 @Controller
 public class MyController {

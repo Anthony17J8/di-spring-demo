@@ -1,24 +1,21 @@
-package ru.ico.services;
+package ru.ico.ltd.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service
-@Primary
-@Profile("de")
-public class PrimaryGermanGreetingServiceImpl implements GreetingService {
+public class PrimarySpanishGreetingServiceImpl implements GreetingService {
 
     private GreetingRepository repository;
 
-    @Autowired
-    public PrimaryGermanGreetingServiceImpl(GreetingRepository repository) {
+    public PrimarySpanishGreetingServiceImpl(GreetingRepository repository) {
         this.repository = repository;
     }
 
     @Override
     public String sayGreeting() {
-        return repository.getGermanGreeting();
+        return repository.getSpanishGreeting();
     }
 }
+
