@@ -3,10 +3,8 @@ package ru.ico.ltd;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import ru.ico.ltd.controllers.ConstructorInjectedController;
 import ru.ico.ltd.controllers.MyController;
-import ru.ico.ltd.controllers.PropertyInjectedController;
-import ru.ico.ltd.controllers.SetterInjectedController;
+import ru.ico.ltd.examplebeans.FakeDataSource;
 
 @SpringBootApplication
 public class DiSpringDemoApplication {
@@ -16,11 +14,9 @@ public class DiSpringDemoApplication {
 
         MyController controller = (MyController) ctx.getBean("myController");
 
-        System.out.println(controller.greeting());
-
-        System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
-        System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+        FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+        System.out.println(fakeDataSource.getUsername());
+        System.out.println(fakeDataSource.getPassword());
+        System.out.println(fakeDataSource.getUrl());
     }
-
 }
