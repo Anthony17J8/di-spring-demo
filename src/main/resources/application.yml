@@ -1,0 +1,4 @@
+jms:
+  username: JMS root
+  password: JPassword
+  url: Jurl
