@@ -2,3 +2,9 @@ jms:
   username: JMS root
   password: JPassword
   url: Jurl
+
+---
+spring:
+  profiles: de
+jms:
+  username: JMS root $$$$ German
